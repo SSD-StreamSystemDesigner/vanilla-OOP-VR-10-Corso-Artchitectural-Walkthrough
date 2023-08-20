@@ -1,14 +1,14 @@
 
-import * as THREE from '/libs/three/three.module.js';
-import { GLTFLoader } from '/libs/three/jsm/GLTFLoader.js';
-import { DRACOLoader } from '/libs/three/jsm/DRACOLoader.js';
-import { RGBELoader } from '/libs/three/jsm/RGBELoader.js';
-import { Stats } from '/libs/stats.module.js';
-import { LoadingBar } from '/libs/LoadingBar.js';
-import { VRButton } from '/libs/VRButton.js';
-import { CanvasUI } from '/libs/CanvasUI.js';
-import { JoyStick } from '/libs/Toon3D.js';
-import { XRControllerModelFactory } from '/libs/three/jsm/XRControllerModelFactory.js';
+import * as THREE from './assets/libs/three/three.module.js';
+import { GLTFLoader } from './assets/libs/three/jsm/GLTFLoader.js';
+import { DRACOLoader } from './assets/libs/three/jsm/DRACOLoader.js';
+import { RGBELoader } from './assets/libs/three/jsm/RGBELoader.js';
+import { Stats } from './assets/libs/stats.module.js';
+import { LoadingBar } from './assets/libs/LoadingBar.js';
+import { VRButton } from './assets/libs/VRButton.js';
+import { CanvasUI } from './assets/libs/CanvasUI.js';
+import { JoyStick } from './assets/libs/Toon3D.js';
+import { XRControllerModelFactory } from './assets/libs/three/jsm/XRControllerModelFactory.js';
 
 class App{
 	constructor(){
@@ -57,7 +57,7 @@ class App{
         
         const self = this;
         
-        fetch('./college.json')
+        fetch('/college.json')
             .then(response => response.json())
             .then(obj =>{
                 self.boardShown = '';
@@ -93,7 +93,7 @@ class App{
         
 		const loader = new GLTFLoader( ).setPath(this.assetsPath);
         const dracoLoader = new DRACOLoader();
-        dracoLoader.setDecoderPath( '../../libs/three/js/draco/' );
+        dracoLoader.setDecoderPath( '../../assets/libs/three/js/draco/' );
         loader.setDRACOLoader( dracoLoader );
         
         const self = this;
