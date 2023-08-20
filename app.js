@@ -15,7 +15,7 @@ class App{
 		const container = document.createElement( 'div' );
 		document.body.appendChild( container );
 
-		this.assetsPath = '../../assets/';
+		this.assetsPath = '/assets/';
         
 		this.camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 500 );
 		this.camera.position.set( 0, 1.6, 0 );
@@ -72,7 +72,7 @@ class App{
         
         const self = this;
         
-        loader.load( '../../assets/hdr/venice_sunset_1k.hdr', ( texture ) => {
+        loader.load( '/assets/hdr/venice_sunset_1k.hdr', ( texture ) => {
           const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
           pmremGenerator.dispose();
 
