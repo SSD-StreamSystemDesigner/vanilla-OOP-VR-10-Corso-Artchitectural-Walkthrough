@@ -93,7 +93,7 @@ class App{
         
 		const loader = new GLTFLoader( ).setPath(this.assetsPath);
         const dracoLoader = new DRACOLoader();
-        dracoLoader.setDecoderPath( './src/draco/' );
+        dracoLoader.setDecoderPath( '/draco/' );
         loader.setDRACOLoader( dracoLoader );
         
         const self = this;
