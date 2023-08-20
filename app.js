@@ -1,14 +1,14 @@
 
-import * as THREE from './assets/libs/three/three.module.js';
-import { GLTFLoader } from './assets/libs/three/jsm/GLTFLoader.js';
-import { DRACOLoader } from './assets/libs/three/jsm/DRACOLoader.js';
-import { RGBELoader } from './assets/libs/three/jsm/RGBELoader.js';
-import { Stats } from './assets/libs/stats.module.js';
-import { LoadingBar } from './assets/libs/LoadingBar.js';
-import { VRButton } from './assets/libs/VRButton.js';
-import { CanvasUI } from './assets/libs/CanvasUI.js';
-import { JoyStick } from './assets/libs/Toon3D.js';
-import { XRControllerModelFactory } from './assets/libs/three/jsm/XRControllerModelFactory.js';
+import * as THREE from './src/libs/three/three.module.js';
+import { GLTFLoader } from './src/libs/three/jsm/GLTFLoader.js';
+import { DRACOLoader } from './src/libs/three/jsm/DRACOLoader.js';
+import { RGBELoader } from './src/libs/three/jsm/RGBELoader.js';
+import { Stats } from './src/libs/stats.module.js';
+import { LoadingBar } from './src/libs/LoadingBar.js';
+import { VRButton } from './src/libs/VRButton.js';
+import { CanvasUI } from './src/libs/CanvasUI.js';
+import { JoyStick } from './src/libs/Toon3D.js';
+import { XRControllerModelFactory } from './src/libs/three/jsm/XRControllerModelFactory.js';
 
 class App{
 	constructor(){
@@ -93,7 +93,7 @@ class App{
         
 		const loader = new GLTFLoader( ).setPath(this.assetsPath);
         const dracoLoader = new DRACOLoader();
-        dracoLoader.setDecoderPath( '../../assets/libs/three/js/draco/' );
+        dracoLoader.setDecoderPath( './src/libs/three/js/draco/' );
         loader.setDRACOLoader( dracoLoader );
         
         const self = this;
